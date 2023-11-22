@@ -17,3 +17,7 @@
   background: rgb(218, 2, 237);
   background: linear-gradient(0deg, rgba(218, 2, 237, 1) 10%, rgba(1, 12, 98, 1) 67%);
 }
+
+#footer {
+  background-color: rgb(46, 45, 45) !important;
+}
