@@ -1,14 +1,14 @@
-import Header from "./Component/Header"
-import Body from "./Component/Body"
-import Particle from "./Component/Particle"
+import Header from "./Component/Header";
+import Body from "./Component/Body";
+import Footer from "./Component/Footer";
 
 function App() {
 
   return (
     <>
-    <Header/>
-    <Body/>
-    <Particle/>
+      <Header />
+      <Body />
+      <Footer/>
     </>
   )
 }
