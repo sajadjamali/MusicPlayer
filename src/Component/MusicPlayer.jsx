@@ -115,7 +115,7 @@ const MusicPlayer = ({ data }) => {
                 <b className="m-3">{name}</b>
               </Typography>
               <Typography
-                // sx={{ marginRight: "10px" }}
+                sx={{ marginRight: "10px" }}
                 noWrap
                 letterSpacing={-0.25}
                 dir="rtl"

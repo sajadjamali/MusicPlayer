@@ -7,8 +7,8 @@ const Music = ({ data, flag }) => {
     return (
         <>
             <Link to={`/musics/${slug}`} style={{ transition: "transform .3s" }} className="flex flex-col items-center hover:scale-105">
-                <div className="px-3 py-5 ring-4 ring-yellow-500 rounded-md bg-indigo-900">
-                    <img className="" style={{ borderRadius: "0 100% 100% 100%" }} src={url} alt="not found" />
+                <div className="px-3 py-5 h-full ring-4 ring-yellow-500 rounded-md bg-indigo-900">
+                    <img style={{ borderRadius: "0 100% 100% 100%" }} src={url} alt="not found" />
                     <p className="mt-2 font-bold text-center text-yellow-500">{name}</p>
                     {
                         flag &&
