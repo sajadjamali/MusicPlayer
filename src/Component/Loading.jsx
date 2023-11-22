@@ -8,7 +8,7 @@ const Loading = () => {
                 <img className="rounded-full" src={loadingGif} alt="not found" />
                 <p className="font bold text-3xl mt-3 text-center text-white">Loading...🎶🎶</p>
             </div>
-            <Particle/>
+            <Particle />
         </section>
     );
 }

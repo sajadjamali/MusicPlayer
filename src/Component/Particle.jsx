@@ -14,10 +14,10 @@ const Particle = () => {
 
     return (
         <Particles
-           id="tsparticels"
-           init={particlesInit}
-           loaded={particlesLoaded}
-           options={particleBackround} />
+            id="tsparticels"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={particleBackround} />
     );
 }
 

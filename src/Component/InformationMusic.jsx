@@ -14,26 +14,26 @@ const InforMationMusic = () => {
         variables: { slug: musicName }
     })
 
-    if(loading) return <Loading />
+    if (loading) return <Loading />
     const { name, id, coverPhoto: { url }, lyrics: { html }, artist } = data.music;
     const playing = artist.musics.filter(music => music.id === id);
 
     return (
         <section className="mb-20">
-            <Header/>
-        <p className="text-center gont-bold text-3xl mt-10 text-yellow-500">{name}</p>
-        <p className="text-center gont-bold text-3xl text-white mt-5">{artist.name}</p>
-        <div className="flex justify-center">
-        <img src={url} className="ring-4 ring-yellow-500 rounded-md mt-10" alt="not found" />
-        </div>
-        <div
-        style={{direction: "rtl"}} className="text-white text-center pb-80 mt-10 space-y-4 px-20" 
-         dangerouslySetInnerHTML={{
-         __html: sanitizeHtml(html),
-         }}>
-        </div>
-        <MusicPlayer data={playing}/>
-        <Particle/>
+            <Header />
+            <p className="text-center gont-bold text-3xl mt-10 text-yellow-500">{name}</p>
+            <p className="text-center gont-bold text-3xl text-white mt-5">{artist.name}</p>
+            <div className="flex justify-center">
+                <img src={url} className="ring-4 ring-yellow-500 rounded-md mt-10" alt="not found" />
+            </div>
+            <div
+                style={{ direction: "rtl" }} className="text-white text-center pb-80 mt-10 space-y-4 px-20"
+                dangerouslySetInnerHTML={{
+                    __html: sanitizeHtml(html),
+                }}>
+            </div>
+            <MusicPlayer data={playing} />
+            <Particle />
         </section>
     );
 }

@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face{
-    font-family: 'Vazir';
-    src: url('./assets/fonts/Vazir.eot') format('eot');
-    src: url('./assets/fonts/Vazir.ttf') format('ttf');
-    src: url('./assets/fonts/Vazir.woff') format('woff');
-  }
-  
-  *{
-    font-family: 'Vazir';
-   }
+@font-face {
+  font-family: 'Vazir';
+  src: url('./assets/fonts/Vazir.eot') format('eot');
+  src: url('./assets/fonts/Vazir.ttf') format('ttf');
+  src: url('./assets/fonts/Vazir.woff') format('woff');
+}
 
-   .header {
-    background: rgb(218,2,237);
-background: linear-gradient(0deg, rgba(218,2,237,1) 10%, rgba(1,12,98,1) 67%);
-   }
+* {
+  font-family: 'Vazir';
+}
+
+.header {
+  background: rgb(218, 2, 237);
+  background: linear-gradient(0deg, rgba(218, 2, 237, 1) 10%, rgba(1, 12, 98, 1) 67%);
+}

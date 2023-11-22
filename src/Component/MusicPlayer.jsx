@@ -16,7 +16,7 @@ const Widget = styled("div")(({ theme }) => ({
   position: "relative",
   zIndex: 1,
   backgroundColor:
-  theme.palette.mode === "dark" ? "rgba(28,35,64,0.9)" : "rgba(24,31,84,0.4)",
+    theme.palette.mode === "dark" ? "rgba(28,35,64,0.9)" : "rgba(24,31,84,0.4)",
   backdropFilter: "blur(40px)",
 }));
 
@@ -83,7 +83,7 @@ const MusicPlayer = ({ data }) => {
   const mainIconColor = theme.palette.mode === "dark" ? "#fff" : "#000";
 
   return (
-    <Box sx={{ width: "100%", overflow: "hidden", position: "fixed", bottom: "0"}}>
+    <Box sx={{ width: "100%", overflow: "hidden", position: "fixed", bottom: "0" }}>
       <audio
         autoPlay
         ref={audioMp3}
