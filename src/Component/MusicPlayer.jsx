@@ -107,14 +107,15 @@ const MusicPlayer = ({ data }) => {
               flexDirection: "row-reverse",
             }}
           >
-            <CoverImage sx={{ marginLeft: "10px" }}>
+            <CoverImage>
               <img alt={name} src={coverPhoto.url} />
             </CoverImage>
             <Box sx={{ ml: 1.5, minWidth: 0 }}>
               <Typography noWrap dir="rtl" color="#fff">
-                <b>{name}</b>
+                <b className="m-3">{name}</b>
               </Typography>
               <Typography
+                // sx={{ marginRight: "10px" }}
                 noWrap
                 letterSpacing={-0.25}
                 dir="rtl"
@@ -150,13 +151,13 @@ const MusicPlayer = ({ data }) => {
               />
             ) : !isPlay ? (
               <PlayArrowRounded
-                sx={{ fontSize: "3rem" }}
+                sx={{ fontSize: "3rem", color: "white" }}
                 htmlColor={mainIconColor}
                 onClick={playMusic}
               />
             ) : (
               <PauseRounded
-                sx={{ fontSize: "3rem" }}
+                sx={{ fontSize: "3rem", color: "white" }}
                 htmlColor={mainIconColor}
                 onClick={pauseMusic}
               />
