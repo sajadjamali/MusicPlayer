@@ -5,17 +5,38 @@ import Particle from "./Particle";
 import { useQuery } from "@apollo/client";
 import a from "/assets/images/a.png"
 import { GET_ARTISTS, GET_LIMIT_MUSIC, GET_ALL_MISICS } from "../graphql/queris";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import '../styles/searchBox.css';
 
 const Home = () => {
 
   const { loading, data } = useQuery(GET_ARTISTS);
-  const { loading: loading1, data: data1 } = useQuery(GET_LIMIT_MUSIC);
+  // const [loading1, setLoading1] = useState(true)
+  // const [data, setData] = useState(null);
+   const { loading: loading1, data: data1 } = useQuery(GET_LIMIT_MUSIC);
   const { loading: loading2, data: data2 } = useQuery(GET_ALL_MISICS);
   const [musicList, setMusicList] = useState([]);
+  const [searchedMusics, setSearchedMusics] = useState([]);
   const ref = useRef(false);
 
-  if (loading || loading || loading2) {
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await useQuery(GET_LIMIT_MUSIC);
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch data');
+  //       }
+  //       const jsonData = await response.json();
+  //       setMusicList(response.musics);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+
+
+  if (loading || loading1 || loading2) {
     return <Loading />;
   }
 
@@ -25,6 +46,11 @@ const Home = () => {
       setMusicList(data2.musics);
     else
       setMusicList(data1.musics);
+  }
+
+  const handleSearch = (e) => {
+    console.log(searchedMusics)
+    setSearchedMusics(musicList.filter(music => music.name.includes(e.target.value) || music.artist.name.includes(e.target.value)))
   }
 
   return (
@@ -38,8 +64,16 @@ const Home = () => {
       </div>
       <hr className="mt-10" />
       <p className="font-bold text-3xl text-yellow-500 text-center my-10">آهنگ ها</p>
-      <button onClick={handleClick} className="bg-yellow-500 text-2xl py-2 rounded-xl block w-10/12 md:w-6/12 m-auto hover:scale-105">{ref.current == true ? "کمتر" : "بیشتر"}</button>
-      <div className="grid mt-10 pb-4 px-5 gap-4 x:gap-7 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <button onClick={handleClick} className="bg-yellow-500 text-xl py-2 rounded-xl block w-8/12 sm:w-4/12 xl:w-2/12 m-auto hover:scale-105">{ref.current == true ? "کمتر" : "بیشتر"}</button>
+      {/* <div className={`flexbox search ${!ref.current ? 'hidden' : 'block'}`}>
+        <div className="search my-10">
+          <div>
+            <input id="searchBox" onChange={handleSearch}
+              title="جستجو کن" style={{ direction: "rtl" }} type="text" placeholder="نام آهنگ موردنظر را وارد کنید" />
+          </div>
+        </div>
+      </div> */}
+      <div className="grid mt-10 pb-4 px-5 gap-4 x:gap-7 grid-cols-1 min-[300px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {
           musicList.map(music => <Music key={music.id} flag={true} data={music} />)
         }

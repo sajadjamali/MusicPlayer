@@ -7,7 +7,7 @@ import InformationArtist from './Component/InformationArtist.jsx'
 import InforMationMusic from './Component/InformationMusic.jsx'
 import Aos from './Component/Aos.jsx'
 import ErrorPage from './Component/ErrorPage.jsx'
-import './index.css'
+import './styles/index.css'
 import {
   createBrowserRouter,
   RouterProvider,
