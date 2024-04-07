@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import Loading from "./Loading";
 import { GET_MUSIC_DATA } from "../graphql/queris";
-import Header from "./Header";
 
 const InforMationMusic = () => {
 
@@ -20,7 +19,6 @@ const InforMationMusic = () => {
 
     return (
         <section>
-            <Header />
             <p className="text-center gont-bold text-3xl mt-7 text-yellow-500">{name}</p>
             <p className="text-center gont-bold text-3xl text-white mt-3">{artist.name}</p>
             <div className="flex justify-center">

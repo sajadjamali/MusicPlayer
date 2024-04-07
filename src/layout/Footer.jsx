@@ -9,22 +9,22 @@ const Footer = () => {
       <div className="flex h-full w-full flex-col items-center justify-center gap-8 md:flex-row lg:justify-between lg:gap-0">
         <div className="order-1 flex h-full w-full items-center justify-center  gap-3 text-2xl lg:order-none ">
           <button className=" text-white/70 hover:scale-110 hover:text-white hover:opacity-100">
-            <InstagramIcon className='text-pink-400' fontSize='large'/>
+            <InstagramIcon className='text-pink-400' fontSize='large' />
           </button>
           <button className=" text-white/70 hover:scale-110 hover:text-white  hover:opacity-100">
-            <TwitterIcon className='text-blue-400' fontSize='large'/>
+            <TwitterIcon className='text-blue-400' fontSize='large' />
           </button>
           <button className=" text-white/70 hover:scale-110 hover:text-white hover:opacity-100">
-            <YouTubeIcon className='text-red-400' fontSize='large'/>
+            <YouTubeIcon className='text-red-400' fontSize='large' />
           </button>
           <button className=" text-white/70 hover:scale-110 hover:text-white hover:opacity-100">
-            <TelegramIcon className='text-blue-400' fontSize='large'/>
+            <TelegramIcon className='text-blue-400' fontSize='large' />
           </button>
         </div>
         <div className="order-1 flex w-full cursor-default flex-col items-center justify-center gap-1 border-x-stone-600 px-4 text-base text-white/70 hover:text-white hover:opacity-100 lg:order-none lg:border-x">
           <p>
             تمامی حقوق مادی و معنوی این سایت متعلق به
-            <span className="font-bold text-md text-red-500"> جمال الغیب </span>
+            <span className="font-bold text-md text-red-500"> بخش مرکزی </span>
             میباشد
           </p>
         </div>

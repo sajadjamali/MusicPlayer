@@ -1,1 +1,1 @@
-a simple music player by reacr + tailwind
+a music player site by React + tailwind

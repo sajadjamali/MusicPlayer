@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import Home from './Component/Home.jsx'
+import Header from './layout/Header.jsx';
+import Footer from './layout/Footer.jsx'
 import InformationArtist from './Component/InformationArtist.jsx'
 import InforMationMusic from './Component/InformationMusic.jsx'
 import ErrorPage from './Component/ErrorPage.jsx'
@@ -19,25 +21,27 @@ const client = new ApolloClient({
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    errorElement: <ErrorPage/>
+    element: <Home />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/artists/:artistName",
-    element: <InformationArtist/>,
-    errorElement: <ErrorPage/>
+    element: <InformationArtist />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/musics/:musicName",
-    element: <InforMationMusic/>,
-    errorElement: <ErrorPage/>
+    element: <InforMationMusic />,
+    errorElement: <ErrorPage />
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-    <RouterProvider router={router} />
+      <Header />
+      <RouterProvider router={router} />
+      <Footer />
     </ApolloProvider>
   </React.StrictMode>
 )

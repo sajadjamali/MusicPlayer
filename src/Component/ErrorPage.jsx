@@ -6,7 +6,7 @@ const ErrorPage = () => {
         <>
             <section className="h-screen flex flex-col justify-center items-center">
                 {/* <img src={error} className="rounded-full w-6/12" alt="not found" /> */}
-                <p className="text-white font-bold text-4xl mt-4">Error....🤦‍♂️</p>
+                <p className="text-white font-bold text-4xl mt-4">Error 404....🤦‍♂️</p>
             </section>
             <Particle />
         </>

@@ -1,4 +1,4 @@
-import loading from "../assets/gifs/loading.gif";
+import loading from "/assets/gifs/loading.gif";
 import Particle from "./Particle";
 
 const Loading = () => {

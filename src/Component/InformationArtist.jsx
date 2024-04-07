@@ -1,7 +1,5 @@
 import Particle from "./Particle";
 import Loading from "./Loading";
-import Header from "./Header";
-import Footer from "./Footer";
 import Music from "./Music";
 import { useParams } from "react-router-dom";
 import { GET_ARTIST } from "../graphql/queris";
@@ -21,7 +19,6 @@ const InformationArtist = () => {
 
     return (
         <>
-            <Header />
             <p className="text-3xl font-bold text-yellow-500 my-10 text-center">{name}</p>
             <img src={url} className="rounded-xl ring-4 ring-yellow-500 m-auto" alt="not found" />
             <div style={{ direction: "rtl" }} className="text-white text-center mt-10 space-y-4 px-10" dangerouslySetInnerHTML={{
@@ -34,7 +31,6 @@ const InformationArtist = () => {
                     musics.map(music => <Music key={music.id} flag={false} data={music} />)
                 }
             </div>
-            <Footer/>
             <Particle />
         </>
     );
