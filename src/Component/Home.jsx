@@ -38,7 +38,7 @@ const Home = () => {
       </div>
       <hr className="mt-10" />
       <p className="font-bold text-3xl text-yellow-500 text-center my-10">آهنگ ها</p>
-      <button onClick={handleClick} className="bg-yellow-500 font-bold text-2xl py-2 rounded-xl block w-10/12 md:w-6/12 m-auto">{ref.current == true ? "کمتر" : "بیشتر"}</button>
+      <button onClick={handleClick} className="bg-yellow-500 text-2xl py-2 rounded-xl block w-10/12 md:w-6/12 m-auto hover:scale-105">{ref.current == true ? "کمتر" : "بیشتر"}</button>
       <div className="grid mt-10 pb-4 px-5 gap-4 x:gap-7 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {
           musicList.map(music => <Music key={music.id} flag={true} data={music} />)

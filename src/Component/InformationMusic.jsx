@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import Loading from "./Loading";
 import { GET_MUSIC_DATA } from "../graphql/queris";
+import { Link } from "react-router-dom";
 
 const InforMationMusic = () => {
 
@@ -19,6 +20,7 @@ const InforMationMusic = () => {
 
     return (
         <section>
+            <Link to="/" className="block text-center py-1 rounded-md mx-auto md:ms-auto md:me-10 mt-8 bg-yellow-500 w-40 hover:scale-105">خانه</Link>
             <p className="text-center gont-bold text-3xl mt-7 text-yellow-500">{name}</p>
             <p className="text-center gont-bold text-3xl text-white mt-3">{artist.name}</p>
             <div className="flex justify-center">

@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './Component/Home.jsx'
-import Header from './layout/Header.jsx';
+import Header from './layout/Header.jsx'
 import Footer from './layout/Footer.jsx'
 import InformationArtist from './Component/InformationArtist.jsx'
 import InforMationMusic from './Component/InformationMusic.jsx'
+import Aos from './Component/Aos.jsx'
 import ErrorPage from './Component/ErrorPage.jsx'
 import './index.css'
 import {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ApolloProvider client={client}>
+      <Aos />
       <Header />
       <RouterProvider router={router} />
       <Footer />

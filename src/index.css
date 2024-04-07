@@ -21,3 +21,8 @@
 #footer {
   background-color: rgb(46, 45, 45) !important;
 }
+
+#music:hover,
+#artist:hover {
+  scale: 1.03;
+}
