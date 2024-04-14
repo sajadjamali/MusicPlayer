@@ -4,7 +4,6 @@ import Artist from "./Artist";
 import Music from "./Music";
 import Particle from "./Particle";
 import { useQuery } from "@apollo/client";
-import logo from "/assets/images/logo.png"
 import { GET_ARTISTS, GET_LIMIT_MUSIC, GET_ALL_MISICS } from "../graphql/queris";
 import { useState, useRef } from "react";
 import { search } from '../utils';
@@ -39,8 +38,7 @@ const Home = () => {
   if (artistsError || limitedMusicsError || allMusicsError) return <ErrorPage />
 
   return (
-    <section className="md:w-10/12 m-auto overflow-hidden">
-      <img src={logo} title="welcome to music player❤" alt="not found" className="text-center m-auto mt-6 w-6/12 md:w-3/12 lg:w-2/12" />
+    <section className="md:w-10/12 m-auto overflow-hidden sm:mt-10">
       <p className="font-bold text-3xl text-yellow-500 text-center mt-8">خوانندگان</p>
       <div className="grid px-5 mt-8 gap-7 min-[450px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {

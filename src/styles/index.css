@@ -9,6 +9,10 @@
   src: url('/assets/fonts/Vazir.woff') format('woff');
 }
 
+body {
+  background-color: #020617;
+}
+
 * {
   font-family: 'Vazir';
 }
